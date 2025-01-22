@@ -38,8 +38,6 @@ class Server:
         assert isinstance(page_size, int) and page_size > 0
         assert isinstance(page, int) and page > 0
         retrieved_dataset = self.get_page(page, page_size)
-        print(len(retrieved_dataset))
-        print(page_size)
         tot_pages = len(retrieved_dataset) / page_size
         tot_pages = math.ceil(tot_pages)
         return {
